@@ -371,11 +371,10 @@ pip install -r requirements.txt
 
 按用量计费，用量看 `usage` 那一行就知道。跑完这个系列，花费很少。第 7 天的评测会一次跑几十次请求，是用量最大的一天。
 
-## 今天记住三件事
+## 今天记住两件事
 
 1. Agent = 模型 + 工具 + 循环。模型只负责想，做事的是你的程序。
 2. 模型没有记忆。它知道的一切，都在这一次发过去的 messages 里。
-3. 用 OpenAI 兼容接口，换模型只改 `BASE_URL` 和 `MODEL`。
 
 ## 练习
 
@@ -393,5 +392,4 @@ pip install -r requirements.txt
 
 - Anthropic，Building effective agents：https://www.anthropic.com/research/building-effective-agents
 - Thorsten Ball，How to Build an Agent：https://ampcode.com/notes/how-to-build-an-agent
-- uv 的官方文档：https://docs.astral.sh/uv/
 - 李宏毅《生成式 AI 时代下的机器学习（2025）》第 2 讲"一堂课搞懂 AI Agent 的原理"：https://speech.ee.ntu.edu.tw/~hylee/ml/2025-spring.php

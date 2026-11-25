@@ -191,7 +191,6 @@ git diff --no-index day04/tools.py day05/tools.py
 |---|---|---|
 | 微信公众号 | rainstudiome | 文章首发 |
 | 知乎 | rainstudiome | 文章同步，回答 Agent 开发的问题 |
-| B 站 | rainstudiome | 视频 |
 
 文章有错、代码跑不通，欢迎在 GitHub 上提 Issue。
 
