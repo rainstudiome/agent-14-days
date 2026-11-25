@@ -1,0 +1,29 @@
+# 密钥和本地配置
+.env
+.env.local
+*.local
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Node（第 13 天的网页）
+node_modules/
+dist/
+
+# 运行时生成的文件
+day07/evals/results/
+day08/memory.md
+day08/.qdrant/
+extra01/traces/
+*.db
+*.log
+
+# 编辑器和系统
+.idea/
+.vscode/
+.DS_Store

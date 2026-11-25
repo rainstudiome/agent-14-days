@@ -1,0 +1,46 @@
+[project]
+name = "agent-14-days"
+version = "0.1.0"
+description = "《从 0 到 1，14 天入门 Agent 开发》第 1–9 天、第 13–14 天和番外的 Python 代码。第 10–12 天在 deep-agent/ 目录，是一个单独的项目"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "openai>=1.40,<4",
+    "python-dotenv>=1.0",
+    "mcp>=2.3,<3",
+    "langchain>=1.5,<2",
+    "langchain-openai>=1.8,<2",
+    "langgraph>=1.2,<2",
+    "qdrant-client>=1.20,<2",  # 第 8 天：向量检索，用 Qdrant 的本地模式
+    "opentelemetry-sdk>=1.45,<2",  # 番外一：OpenTelemetry 追踪
+    "opentelemetry-exporter-otlp-proto-http>=1.45,<2",
+]
+
+[project.optional-dependencies]
+# 第 9 天的进阶部分：把 LangGraph 的状态存进 Postgres
+postgres = [
+    "langgraph-checkpoint-postgres>=3.2,<4",
+    "psycopg[binary]>=3.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "ruff>=0.16",
+]
+
+[tool.uv]
+package = false  # 这是一组教程脚本，不是一个要发布的包
+
+[tool.ruff]
+line-length = 120
+extend-exclude = ["sample_repo", "deep-agent", "*.md"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["tools", "permissions", "planning", "context", "memory", "retrieval", "agent", "instrument", "tracer", "otel", "a2a_client"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

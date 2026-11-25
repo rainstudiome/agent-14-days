@@ -1,0 +1,24 @@
+# 用 pip 的话装这个；用 uv 的话直接 uv sync，以 pyproject.toml 为准
+# 第 1–9 天、第 13–14 天和番外的 Python 依赖。第 10–12 天在 deep-agent/ 目录，是一个单独的项目，有自己的依赖；第 13 天的网页在 day13/web/，用 npm 装
+
+openai>=1.40,<4
+python-dotenv>=1.0
+
+# 第 4 天：MCP 服务
+mcp>=2.3,<3
+
+# 第 8 天：向量检索，用 Qdrant 的本地模式
+qdrant-client>=1.20,<2
+
+# 第 9 天：LangGraph
+langchain>=1.5,<2
+langchain-openai>=1.8,<2
+langgraph>=1.2,<2
+
+# 第 9 天的进阶部分：把状态存进 Postgres（不用的话可以不装）
+langgraph-checkpoint-postgres>=3.2,<4
+psycopg[binary]>=3.2
+
+# 番外一：OpenTelemetry 追踪
+opentelemetry-sdk>=1.45,<2
+opentelemetry-exporter-otlp-proto-http>=1.45,<2
