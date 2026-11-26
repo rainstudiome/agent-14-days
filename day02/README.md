@@ -241,6 +241,8 @@ uv run day02/tool_call.py "README 和 pyproject.toml 里分别写了什么？"
 2. 打印两次请求的 `usage`，第二次多花了多少 token？
 3. 把 `description` 删掉，只留名字，看模型还会不会用这个工具。
 
+参考答案和代码在 [`solutions/`](solutions/) 目录，先自己做一遍再看。
+
 ## 明天
 
 真实的问题往往要查好几步。明天把今天的代码改成循环：一个不到 100 行的 Agent。
